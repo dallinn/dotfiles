@@ -63,6 +63,8 @@ set laststatus=2
 set splitright
 " vim-colorschemes theme
 colorscheme busybee
+" Set all tt files to tt2
+au BufNewFile,BufRead *.tt setf tt2
 " Set all html files to tt2html (for work only)
 au BufRead,BufNewFile *.html set filetype=tt2html
 " Set all tt files to tt2html (for work only)
