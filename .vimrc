@@ -25,6 +25,10 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 " Vim perl syntax highlighting and template toolkit
 Plugin 'vim-perl/vim-perl'
+" Es6 vim syntax and snippets
+Plugin 'othree/yajs.vim'
+" NERDTREE expolorer view
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,6 +61,8 @@ set cursorline
 set nowrap
 set laststatus=2
 set splitright
+set mouse=nicr
+
 " vim-colorschemes theme
 colorscheme busybee
 " Set all tt files to tt2
@@ -65,3 +71,9 @@ au BufNewFile,BufRead *.tt setf tt2
 au BufRead,BufNewFile *.html set filetype=tt2html
 " Set all tt files to tt2html (for work only)
 au BufRead,BufNewFile *.tt set filetype=tt2html
+" Set all ejs files to html
+au BufRead,BufNewFile *.ejs set filetype=html
+" Auto start NERDTree
+au vimenter * NERDTree
+au VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
