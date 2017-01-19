@@ -61,6 +61,7 @@ set cursorline
 set nowrap
 set laststatus=2
 set splitright
+set splitbelow
 set mouse=nicr
 
 " vim-colorschemes theme
