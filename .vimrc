@@ -51,7 +51,7 @@ set splitbelow
 set mouse=nicr
 set t_Co=256
 
-"  colorscheme / themes
+" Vim colorscheme / themes
 "colorscheme Monokai
 colorscheme wombat
 let g:airline_theme='wombat'
