@@ -18,6 +18,8 @@ Plugin 'vim-perl/vim-perl'
 Plugin 'othree/yajs.vim'
 " NERDTREE expolorer view
 Plugin 'scrooloose/nerdtree'
+" Emmet
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -59,14 +61,6 @@ let g:airline_theme='wombat'
 
 augroup commands
     au!
-    " Set all tt files to tt2
-    au BufNewFile,BufRead *.tt setf tt2
-    " Set all html files to tt2html (for work only)
-    "au BufRead,BufNewFile *.html set filetype=tt2html
-    " Set all tt files to tt2html (for work only)
-    "au BufRead,BufNewFile *.tt set filetype=tt2html
-    " Set all ejs files to html
-    au BufRead,BufNewFile *.ejs set filetype=html
     " Auto start NERDTree
     au vimenter * NERDTree
     au vimenter * wincmd p
