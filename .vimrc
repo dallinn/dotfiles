@@ -1,13 +1,11 @@
 " VUNDLE BEGIN
-set nocompatible              " required
-filetype off                  " required
-
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim' 
 
-" Required for Vundle
-Plugin 'VundleVim/Vundle.vim'
-
+" Vundle Plugins
 " Vim-Airline status bar and themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -18,20 +16,15 @@ Plugin 'vim-perl/vim-perl'
 Plugin 'othree/yajs.vim'
 " NERDTREE expolorer view
 Plugin 'scrooloose/nerdtree'
-" Emmet
+" emmet vim
 Plugin 'mattn/emmet-vim'
+" scala
+Plugin 'derekwyatt/vim-scala'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on
 
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-
-" see :h vundle for help
-" END OF VUNDLE
-
+" Vim Options
 syntax enable
 set expandtab
 set tabstop=4
@@ -55,12 +48,25 @@ set t_Co=256
 
 " Vim colorscheme / themes
 "colorscheme Monokai
+"colorscheme busybee
 colorscheme wombat
 let g:airline_theme='wombat'
-"colorscheme busybee
+
+" Show Hidden Files on Sidebar
+let NERDTreeShowHidden=1
 
 augroup commands
     au!
+    " Set all tt files to tt2
+    "au BufNewFile,BufRead *.tt setf tt2
+    " Set all html files to tt2html (for work only)
+    "au BufRead,BufNewFile *.html set filetype=tt2html
+    " Set all tt files to tt2html (for work only)
+    "au BufRead,BufNewFile *.tt set filetype=tt2html
+    " Node template files
+    "au BufRead,BufNewFile *.ejs set filetype=html
+    "au BufRead,BufNewFile *.hbs set filetype=html
+    "au BufRead,BufNewFile *.handlebars set filetype=html
     " Auto start NERDTree
     au vimenter * NERDTree
     au vimenter * wincmd p
