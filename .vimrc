@@ -57,16 +57,8 @@ let NERDTreeShowHidden=1
 
 augroup commands
     au!
-    " Set all tt files to tt2
-    "au BufNewFile,BufRead *.tt setf tt2
-    " Set all html files to tt2html (for work only)
-    "au BufRead,BufNewFile *.html set filetype=tt2html
-    " Set all tt files to tt2html (for work only)
-    "au BufRead,BufNewFile *.tt set filetype=tt2html
-    " Node template files
-    "au BufRead,BufNewFile *.ejs set filetype=html
-    "au BufRead,BufNewFile *.hbs set filetype=html
-    "au BufRead,BufNewFile *.handlebars set filetype=html
+    " Set all vue files to html
+    au BufRead,BufNewFile *.vue set filetype=html
     " Auto start NERDTree
     au vimenter * NERDTree
     au vimenter * wincmd p
