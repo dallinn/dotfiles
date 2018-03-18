@@ -43,8 +43,17 @@ set nowrap
 set laststatus=2
 set splitright
 set splitbelow
-set mouse=nicr
 set t_Co=256
+
+set mouse=nicr
+
+" Use mouse to resize vim panes
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
+
 
 " Vim colorscheme / themes
 "colorscheme Monokai
