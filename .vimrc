@@ -9,17 +9,19 @@ Plugin 'VundleVim/Vundle.vim'
 " Vim-Airline status bar and themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'flazz/vim-colorschemes'
-" Vim perl syntax highlighting and template toolkit
-#Plugin 'vim-perl/vim-perl'
-" Es6 vim syntax and snippets
 Plugin 'othree/yajs.vim'
 " NERDTREE expolorer view
 Plugin 'scrooloose/nerdtree'
+
+" Previously Used
+"Plugin 'flazz/vim-colorschemes'
+" Vim perl syntax highlighting and template toolkit
+"#Plugin 'vim-perl/vim-perl'
+" Es6 vim syntax and snippets
 " emmet vim
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 " scala
-#Plugin 'derekwyatt/vim-scala'
+"#Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 filetype plugin indent on
@@ -27,9 +29,9 @@ filetype plugin indent on
 " Vim Options
 syntax enable
 set expandtab
-#set tabstop=4
-#set softtabstop=4
-#set shiftwidth=4
+"set tabstop=4
+"set softtabstop=4
+"set shiftwidth=4
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -77,7 +79,7 @@ augroup commands
     au vimenter * wincmd p
     au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-    #au BufNewFile,Bufread *.vue set filetype=html
+    "au BufNewFile,Bufread *.vue set filetype=html
     au BufNewFile,Bufread *.vue set syntax=html
     au BufNewFile,Bufread *.grc.conf set syntax=sh
 augroup END
